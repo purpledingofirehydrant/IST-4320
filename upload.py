@@ -2,11 +2,9 @@ import os
 import time
 import paramiko
 #from download1 import var1
-from info import USER, PASS, file
+from info import USER, PASS, file, host, port
 def uploadfile():
     print('start upload')
-    host = '192.168.4.115'
-    port = 22
     transport = paramiko.Transport((host, port))
 #ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     transport.connect(username=USER, password=PASS)
@@ -21,8 +19,6 @@ def uploadfile():
     print('close upload!')
 def getintake():
     print('start intake')
-    host = '192.168.4.115'
-    port = 22
     transport = paramiko.Transport((host, port))
 #ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     transport.connect(username=USER, password=PASS)
